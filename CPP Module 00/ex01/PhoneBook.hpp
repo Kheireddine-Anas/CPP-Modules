@@ -14,7 +14,7 @@ private:
     int index;
     int count;
 
-    void printContact(const Contact& contact, int index) const;
+    void printContact(const Contact &contact, int index) const;
 };
 
 #endif

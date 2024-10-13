@@ -7,7 +7,6 @@ int main() {
 
     while (true) {
         std::cout << "Command : ";
-        // std::getline(std::cin, command);
         if (!std::getline(std::cin, command))
             break;
         if (command == "ADD") {

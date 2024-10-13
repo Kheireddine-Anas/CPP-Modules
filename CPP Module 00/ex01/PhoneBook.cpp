@@ -10,27 +10,27 @@ void PhoneBook::addContact() {
 
     std::cout << "Enter first name: ";
     std::getline(std::cin, input);
-    if (input.empty()) return;
+    if (input.empty() || std::all_of(input.begin(), input.end(), ::isspace)) return;
     newContact.setFirstName(input);
 
     std::cout << "Enter last name: ";
     std::getline(std::cin, input);
-    if (input.empty()) return;
+    if (input.empty() || std::all_of(input.begin(), input.end(), ::isspace)) return;
     newContact.setLastName(input);
 
     std::cout << "Enter nickname: ";
     std::getline(std::cin, input);
-    if (input.empty()) return;
+    if (input.empty() || std::all_of(input.begin(), input.end(), ::isspace)) return;
     newContact.setNickname(input);
 
     std::cout << "Enter phone number: ";
     std::getline(std::cin, input);
-    if (input.empty()) return;
+    if (input.empty() || std::all_of(input.begin(), input.end(), ::isspace)) return;
     newContact.setPhoneNumber(input);
 
     std::cout << "Enter darkest secret: ";
     std::getline(std::cin, input);
-    if (input.empty()) return;
+    if (input.empty() || std::all_of(input.begin(), input.end(), ::isspace)) return;
     newContact.setDarkestSecret(input);
 
     contacts[index] = newContact;
@@ -51,11 +51,11 @@ void PhoneBook::searchContact() const {
         return;
     }
 
-    std::cout << "|" << std::setw(10) << "Index" 
-              << "|" << std::setw(10) << "First Name"
-              << "|" << std::setw(10) << "Last Name"
-              << "|" << std::setw(10) << "Nickname" << "|" << std::endl;
-    
+    std::cout << "|" << std::setw(10) << std::right << "Index" 
+              << "|" << std::setw(10) << std::right << "First Name"
+              << "|" << std::setw(10) << std::right << "Last Name"
+              << "|" << std::setw(10) << std::right << "Nickname" << "|" << std::endl;
+
     for (int i = 0; i < count; i++) {
         printContact(contacts[i], i);
     }
@@ -63,7 +63,7 @@ void PhoneBook::searchContact() const {
     int index;
     std::cout << "Enter index of contact to view: ";
     std::cin >> index;
-    std::cin.ignore();  // Ignore newline left in buffer
+    std::cin.ignore();
 
     if (index < 0 || index >= count) {
         std::cout << "Invalid index." << std::endl;
