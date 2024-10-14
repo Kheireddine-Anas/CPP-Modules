@@ -1,19 +1,25 @@
 #include <iostream>
-#include <cctype>
 
-int main(int ac, char **av)
-{
-	int i = 0;
-	int j = 0;
-	char c;
-	(void)ac;
-	while (av[++i])
-	{
-		 j = 0;
-		while (av[i][j])
-		{
-			c = std::toupper(av[i][j++]);
-			std::cout << c;
+class Contacts {
+	private:
+		std::string name;
+		int number;
+		std::string darkSecrect;
+	public:
+		void set(std::string nm, int n, std::string drk) {
+			name = nm;
+			number = n;
+			darkSecrect = drk;
 		}
-	}
+		void prt() {
+			std::cout << name << "\n" << number << "\n" << darkSecrect << std::endl;
+		}
+};
+
+int main()
+{
+	Contacts cnt;
+	cnt.set("GOLDER", 22266, "HANDER");
+	cnt.prt();
+	return 0;
 }

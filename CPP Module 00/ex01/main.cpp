@@ -6,7 +6,7 @@ int main() {
     std::string command;
 
     while (true) {
-        std::cout << "Command : ";
+        std::cout << "\033[33mCommand : \033[0m";
         if (!std::getline(std::cin, command))
             break;
         if (command == "ADD") {
@@ -16,7 +16,7 @@ int main() {
         } else if (command == "EXIT") {
             break;
         } else {
-            std::cout << "Invalid command. Please try again." << std::endl;
+            std::cout << "\033[31mInvalid command. Please try again.\033[0m" << std::endl;
         }
     }
 
