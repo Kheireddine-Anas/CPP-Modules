@@ -1,4 +1,4 @@
-SRCS		= main.cpp
+SRCS		= main.cpp Weapon.cpp HumanA.cpp HumanB.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
@@ -8,7 +8,7 @@ RM			= rm -f
 
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-NAME =          brain
+NAME =          Weapons
 
 all:            $(NAME)
 

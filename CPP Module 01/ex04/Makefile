@@ -8,7 +8,7 @@ RM			= rm -f
 
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-NAME =          Strings
+NAME =          Weapons
 
 all:            $(NAME)
 
