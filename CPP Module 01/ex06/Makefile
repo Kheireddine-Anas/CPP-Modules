@@ -6,7 +6,7 @@
 #    By: akheired <akheired@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/10/27 10:10:55 by akheired          #+#    #+#              #
-#    Updated: 2024/10/27 10:10:56 by akheired         ###   ########.fr        #
+#    Updated: 2024/10/27 15:15:41 by akheired         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,7 @@ RM			= rm -f
 
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-NAME =          Harl
+NAME =          harlFilter
 
 all:            $(NAME)
 
