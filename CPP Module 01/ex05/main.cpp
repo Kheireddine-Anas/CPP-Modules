@@ -1,37 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   megaphone.cpp                                      :+:      :+:    :+:   */
+/*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/25 08:11:15 by akheired          #+#    #+#             */
-/*   Updated: 2024/10/25 08:11:16 by akheired         ###   ########.fr       */
+/*   Created: 2024/10/27 10:10:51 by akheired          #+#    #+#             */
+/*   Updated: 2024/10/27 10:10:53 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
-#include <cctype>
+#include "Harl.hpp"
 
-int main(int ac, char **av)
-{
-	int i = 0;
-	int j = 0;
-	char c;
+int main() {
+	Harl harl;
 
-	if (ac > 1)
-	{
-		while (av[++i])
-		{
-			j = 0;
-			while (av[i][j])
-			{
-				c = std::toupper(av[i][j++]);
-				std::cout << c;
-			}
-		}
-		std::cout << "\n";
-	}
-	else
-		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
+	harl.complain("DEBUG");
+	harl.complain("INFO");
+	harl.complain("WARNING");
+	harl.complain("ERRORd");
 }
