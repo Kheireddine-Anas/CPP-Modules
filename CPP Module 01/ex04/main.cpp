@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 10:01:54 by akheired          #+#    #+#             */
-/*   Updated: 2024/11/02 11:19:52 by akheired         ###   ########.fr       */
+/*   Updated: 2024/11/02 13:28:28 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ int main(int ac, char **av) {
 		std::ifstream fl(filename.c_str());
 		if (!fl.is_open()) {
 			std::cout << "Error Opening the file!" << std::endl;
+			return 1;
+		}
+
+		if (s1.empty()) {
+			std::cout << "ARGS!" << std::endl;
 			return 1;
 		}
 
