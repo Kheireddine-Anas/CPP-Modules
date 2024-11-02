@@ -6,14 +6,13 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 10:08:51 by akheired          #+#    #+#             */
-/*   Updated: 2024/11/02 10:08:57 by akheired         ###   ########.fr       */
+/*   Updated: 2024/11/02 11:18:09 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef HUMANB_HPP
 #define HUMANB_HPP
 
-#include <string>
 #include <iostream>
 #include "Weapon.hpp"
 

@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 09:58:51 by akheired          #+#    #+#             */
-/*   Updated: 2024/11/02 09:58:52 by akheired         ###   ########.fr       */
+/*   Updated: 2024/11/02 11:19:03 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ int main() {
 	for (int i = 0; i < N; i++) {
 		Zombies[i].announce();
 	}
+	delete[] Zombies;
 }

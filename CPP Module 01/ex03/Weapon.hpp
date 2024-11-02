@@ -6,14 +6,14 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 10:09:10 by akheired          #+#    #+#             */
-/*   Updated: 2024/11/02 10:09:11 by akheired         ###   ########.fr       */
+/*   Updated: 2024/11/02 11:20:53 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef WEAPON_HPP
 #define WEAPON_HPP
 
-#include <string>
+#include <iostream>
 
 class Weapon {
 	private:

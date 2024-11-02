@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 09:58:20 by akheired          #+#    #+#             */
-/*   Updated: 2024/11/02 09:58:54 by akheired         ###   ########.fr       */
+/*   Updated: 2024/11/02 11:22:59 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 #define ZOMBIE_HPP
 
 #include <iostream>
-#include <string>
 
 class Zombie
 {

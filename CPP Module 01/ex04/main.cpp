@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/02 10:01:54 by akheired          #+#    #+#             */
-/*   Updated: 2024/11/02 10:01:55 by akheired         ###   ########.fr       */
+/*   Updated: 2024/11/02 11:19:52 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ int main(int ac, char **av) {
 		s1 = av[2];
 		s2 = av[3];
 
-		std::ifstream fl(filename);
+		std::ifstream fl(filename.c_str());
 		if (!fl.is_open()) {
 			std::cout << "Error Opening the file!" << std::endl;
 			return 1;
@@ -45,7 +45,7 @@ int main(int ac, char **av) {
 		}
 
 		std::string outname = filename + ".replace";
-		std::ofstream outputFile(outname);
+		std::ofstream outputFile(outname.c_str());
 		if (!outputFile.is_open()) {
 			std::cout << "Unable to create the file" << std::endl;
 			return 1;
