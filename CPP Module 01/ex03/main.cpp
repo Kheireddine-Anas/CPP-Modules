@@ -1,16 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.cpp                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/11/02 10:08:57 by akheired          #+#    #+#             */
+/*   Updated: 2024/11/02 10:09:00 by akheired         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "Weapon.hpp"
 #include "HumanA.hpp"
 #include "HumanB.hpp"
-
-// int main() {
-// 	Weapon weapon = Weapon("pan");
-// 	HumanA m9l("m9l", weapon);
-// 	m9l.attack();
-// 	weapon.setType("ma9la");
-// 	m9l.attack();
-// 	return 0;
-// }
-
 
 int main(){
 	{
