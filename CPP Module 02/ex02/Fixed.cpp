@@ -13,7 +13,7 @@
 #include "Fixed.hpp"
 
 Fixed::Fixed() : fixed_point(0) {
-	std::cout << "Default constructor called" << std::endl;
+	// std::cout << "Default constructor called" << std::endl;
 }
 
 Fixed::Fixed(const int int_value) {
@@ -23,7 +23,7 @@ Fixed::Fixed(const int int_value) {
 
 Fixed::Fixed(const float float_value) {
 	// std::cout << "Float constructor called" << std::endl;
-	fixed_point = roundf(float_value * (1 << frac_bit));
+	fixed_point = roundf(float_value * 256);
 }
 
 Fixed::Fixed(const Fixed& other) {
@@ -53,7 +53,7 @@ void Fixed::setRawBits(int const raw) {
 }
 
 float Fixed::toFloat( void ) const {
-	return static_cast <float>(fixed_point) / (1 << frac_bit);
+	return static_cast <float>(fixed_point) / 256;
 }
 
 int Fixed::toInt( void ) const {
