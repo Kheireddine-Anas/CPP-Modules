@@ -53,7 +53,7 @@ void Fixed::setRawBits(int const raw) {
 }
 
 float Fixed::toFloat( void ) const {
-	return static_cast <float>(fixed_point) / (1 << frac_bit);
+	return static_cast <float>(fixed_point) / 256;
 }
 
 int Fixed::toInt( void ) const {
