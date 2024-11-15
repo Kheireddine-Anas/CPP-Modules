@@ -1,36 +1,17 @@
-#include <iostream>
-
-class Par {
-    private:
-        std::string s;
-        int n;
-        int a;
-    public:
-        void set(int f, std::string r) {
-            n = f;
-            s = r;
-        };
-        void print() {
-            std::cout << n << s << a << std::endl;
-        };
-};
-
-class Pars : public Par {
-    private:
-        int n;
-        std::string s;
-    public:
-        void set(int f, std::string r) {
-            n = f;
-            s = r;
-        };
-        void print() {
-            std::cout << n << s << std::endl;
-        };
-};
+#include "ClapTrap.hpp"
 
 int main() {
-    Pars fd;
-    fd.set(44, "gol");
-    fd.print();
+    ClapTrap clap1("FPL-54");
+    ClapTrap clap2("AIR-16");
+
+    clap1.attack(clap2);
+
+    clap2.takeDamage(5);
+    clap2.beRepaired(3);
+
+    for (int i = 0; i < 10; ++i) {
+        clap1.attack(clap2);
+    }
+
+    return 0;
 }
