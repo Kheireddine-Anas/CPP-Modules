@@ -22,10 +22,10 @@ Animal& Animal::operator=( const Animal& other ) {
 	return *this;
 }
 
-void Animal::makeSound() {
+void Animal::makeSound() const {
 	std::cout << "Animals Sound" << std::endl;
 }
 
-std::string Animal::getType() {
+std::string Animal::getType() const {
 	return this->type;
 }

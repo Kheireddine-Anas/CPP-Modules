@@ -10,9 +10,8 @@ Cat::~Cat() {
 	
 }
 
-Cat::Cat( const Cat& other ) {
+Cat::Cat( const Cat& other ) : Animal( other ) {
 	std::cout << "Copy Constructor Called For Cat Class" << std::endl;	
-	
 }
 
 Cat& Cat::operator=( const Cat& other ) {
@@ -23,6 +22,6 @@ Cat& Cat::operator=( const Cat& other ) {
 	return *this;
 }
 
-void Cat::makeSound() override {
+void Cat::makeSound() const {
 	std::cout << "Meo Meo!" << std::endl;
 }
