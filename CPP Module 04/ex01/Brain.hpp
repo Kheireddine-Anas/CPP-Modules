@@ -12,7 +12,6 @@ class Brain {
 		Brain& operator=( const Brain& other );
 
 		std::string ideas[100];
-
 };
 
 

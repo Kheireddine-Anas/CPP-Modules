@@ -1,7 +1,7 @@
 #include "Animal.hpp"
 
 
-Animal::Animal() {
+Animal::Animal() : type("Animal") {
 	std::cout << "Constructor Called For Animal Class" << std::endl;	
 }
 

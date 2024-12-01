@@ -26,8 +26,8 @@ int main()
 	const WrongAnimal* wrongCat = new WrongCat();
 
 	std::cout << wrongCat->getType() << " " << std::endl;
-	wrongCat->makeSound();
-	wrongMeta->makeSound();
+	wrongCat->makeSound(); // Output: WrongAnimal makes a generic sound
+	wrongMeta->makeSound(); // Output: WrongAnimal makes a generic sound
 
 	delete wrongMeta;
 	delete wrongCat;

@@ -13,10 +13,12 @@ Brain::Brain( const Brain& other ) {
 	for (int i = 0; i < 100; i++)
 		ideas[i] = other.ideas[i];
 }
-Brain::Brain( const Brain& other ) {
+
+Brain& Brain::operator=( const Brain& other ) {
 	std::cout << "Brain Assignment OperatoConstrictor Called" << std::endl;
 	if (this != &other) {
 		for (int i = 0; i < 100; i++)
 			ideas[i] = other.ideas[i];
 	}
 }
+
