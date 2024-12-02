@@ -1,36 +1,36 @@
 #include "Animal.hpp"
-#include "Cat.hpp"
 #include "Dog.hpp"
-#include "WrongAnimal.hpp"
-#include "WrongCat.hpp"
+#include "Cat.hpp"
 
-int main()
-{
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+int main() {
 
-	std::cout << j->getType() << " " << std::endl;
-	std::cout << i->getType() << " " << std::endl;
-	i->makeSound();
-	j->makeSound();
-	meta->makeSound();
+    const Animal* j = new Dog();
+    const Animal* i = new Cat();
 
-	delete meta;
-	delete j;
-	delete i;
+    delete j;
+    delete i;
 
-	std::cout << "----- WrongAnimal Tests -----" << std::endl;
+    // Array of animals
+    Animal* animals[4];
+    for (int k = 0; k < 2; ++k) {
+		animals[k] = new Dog();
+		std::cout << "---------------" << std::endl;
+	}
 
-	const WrongAnimal* wrongMeta = new WrongAnimal();
-	const WrongAnimal* wrongCat = new WrongCat();
+    for (int k = 2; k < 4; ++k) {
+        animals[k] = new Cat();
+	}
 
-	std::cout << wrongCat->getType() << " " << std::endl;
-	wrongCat->makeSound(); // Output: WrongAnimal makes a generic sound
-	wrongMeta->makeSound(); // Output: WrongAnimal makes a generic sound
+	std::cout << "****************" << std::endl;
+    for (int k = 0; k < 4; ++k) {
+        delete animals[k];
+	}
 
-	delete wrongMeta;
-	delete wrongCat;
+	std::cout << "****************" << std::endl;
 
-	return 0;
+    // Deep copy
+    Dog originalDog;
+    Dog copiedDog = originalDog; // Calls Dog copy constructor
+
+    return 0;
 }

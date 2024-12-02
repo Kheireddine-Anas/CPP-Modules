@@ -10,8 +10,9 @@ Animal::~Animal() {
 	
 }
 
-Animal::Animal( const Animal& other ) : type(other.type) {
+Animal::Animal( const Animal& other )  {
 	std::cout << "Copy Constructor Called For Animal Class" << std::endl;	
+	type = other.type;
 }
 
 Animal& Animal::operator=( const Animal& other ) {
