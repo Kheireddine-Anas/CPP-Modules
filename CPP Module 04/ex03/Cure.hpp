@@ -9,11 +9,10 @@ class Cure : public AMateria {
 	public:
 		Cure();
 		Cure( Cure& const other );
-		Cure operator=( Cure& const other );
+		Cure& operator=( Cure& const other );
 		virtual ~Cure();
 
-		Cure( std::string name );
-		Cure clone();
+		AMateria* clone() const;
 		void use( ICharacter& target );
 };
 
