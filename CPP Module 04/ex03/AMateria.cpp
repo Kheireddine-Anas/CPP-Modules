@@ -1,4 +1,4 @@
-#include "AMateris.hpp"
+#include "AMateria.hpp"
 
 AMateria::AMateria() {
 
@@ -8,11 +8,11 @@ AMateria::~AMateria() {
 
 }
 
-AMateria::AMateria( AMateria& const other ) {
+AMateria::AMateria( AMateria const &other ) {
 	this->_type = other._type;
 }
 
-AMateria& AMateria::operator=( AMateria& const other ) {
+AMateria& AMateria::operator=( AMateria const &other ) {
 	if ( this != &other )
 		this->_type = other._type;
 	return *this;
