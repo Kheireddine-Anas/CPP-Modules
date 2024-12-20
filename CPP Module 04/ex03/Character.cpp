@@ -25,7 +25,9 @@ Character &Character::operator=( Character const &other ) {
 
 Character::~Character() {
 	for (int i=0; i < 4; i++)
-		delete _inventory[4];
+		if (_inventory[i] != NULL) {
+			delete _inventory[i];
+		}
 }
 
 Character::Character( std::string const &name ) : _name(name) {
