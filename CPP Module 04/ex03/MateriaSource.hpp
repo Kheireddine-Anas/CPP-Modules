@@ -3,7 +3,7 @@
 
 #include "IMateriaSource.hpp"
 
-class MateriaSource : IMateriaSource {
+class MateriaSource : public IMateriaSource {
 	private:
 		AMateria* _Materias[4];
 	public:

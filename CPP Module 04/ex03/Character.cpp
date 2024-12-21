@@ -35,7 +35,7 @@ Character::Character( std::string const &name ) : _name(name) {
 		_inventory[i] = NULL;
 }
 
-std::string const &Character::getName() {
+std::string const &Character::getName() const {
 	return _name;
 }
 
