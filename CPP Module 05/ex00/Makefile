@@ -6,7 +6,7 @@
 #    By: akheired <akheired@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/10 18:23:22 by akheired          #+#    #+#              #
-#    Updated: 2025/01/10 18:23:23 by akheired         ###   ########.fr        #
+#    Updated: 2025/01/14 13:46:26 by akheired         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,7 +25,7 @@ NAME		= Bureaucrat
 
 all:$(NAME)
 
-$(NAME): $(OBJS) Bureaucrat.hpp
+$(NAME): $(OBJS)
 		$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJS)
 
 clean:

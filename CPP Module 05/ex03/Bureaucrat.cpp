@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/10 12:02:25 by akheired          #+#    #+#             */
-/*   Updated: 2025/01/10 18:31:35 by akheired         ###   ########.fr       */
+/*   Created: 2025/01/14 09:30:00 by akheired          #+#    #+#             */
+/*   Updated: 2025/01/14 09:30:01 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ Bureaucrat& Bureaucrat::operator=( const Bureaucrat& other ) {
 }
 
 Bureaucrat::~Bureaucrat() {
-	std::cout << "Destructor called by: " << this->getName() << std::endl;
+	// std::cout << "Destructor called by: " << this->getName() << std::endl;
 }
 
 Bureaucrat::Bureaucrat( const std::string nm, int grd ) : name(nm), grade(grd) {
@@ -55,7 +55,7 @@ void Bureaucrat::IncGrade() {
 	if (grade < 1) {
 		throw GradeTooHighException();
 	}
-	std::cout << this->getName() << " Incremented to: " << getGrade() << std::endl;
+	std::cout << this->getName() << " : Incremented to: " << getGrade() << std::endl;
 }
 
 void Bureaucrat::DecGrade() {
@@ -64,6 +64,25 @@ void Bureaucrat::DecGrade() {
 		throw GradeTooLowException();
 	}
 	std::cout << this->getName() << " : Decremented to: " << getGrade() << std::endl;
+}
+
+void Bureaucrat::signForm( AForm& f ){
+	try {
+		f.beSigned(*this);
+		std::cout << name << " signed " << f.getName() << std::endl;
+	}
+	catch (std::exception& e) {
+		std::cout << name << " couldn't sign " << f.getName() << " because " << e.what() << std::endl;
+	}
+}
+
+void Bureaucrat::executeForm( const AForm& form ) {
+	try {
+		form.execute(*this);
+		std::cout << name << " executed " << form.getName() << std::endl;
+	} catch ( const std::exception& e) {
+		std::cout << name << " couldn't execute " << form.getName() << " because " << e.what() << std::endl;
+	}
 }
 
 const char* Bureaucrat::GradeTooHighException::what() const throw() {

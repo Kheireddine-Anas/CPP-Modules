@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:49:31 by akheired          #+#    #+#             */
-/*   Updated: 2025/01/13 16:39:09 by akheired         ###   ########.fr       */
+/*   Updated: 2025/01/14 07:32:05 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ Bureaucrat& Bureaucrat::operator=( const Bureaucrat& other ) {
 }
 
 Bureaucrat::~Bureaucrat() {
-	std::cout << "Destructor called by: " << this->getName() << std::endl;
+	// std::cout << "Destructor called by: " << this->getName() << std::endl;
 }
 
 Bureaucrat::Bureaucrat( const std::string nm, int grd ) : name(nm), grade(grd) {

@@ -5,13 +5,13 @@
 #                                                     +:+ +:+         +:+      #
 #    By: akheired <akheired@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/01/12 17:48:47 by akheired          #+#    #+#              #
-#    Updated: 2025/01/14 13:46:01 by akheired         ###   ########.fr        #
+#    Created: 2025/01/14 09:30:22 by akheired          #+#    #+#              #
+#    Updated: 2025/01/14 13:45:52 by akheired         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
-SRCS		= main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp
+SRCS		= main.cpp Bureaucrat.cpp AForm.cpp ShrubberyCreationForm.cpp RobotomyRequestForm.cpp PresidentialPardonForm.cpp Intern.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 

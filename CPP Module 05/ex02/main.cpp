@@ -6,7 +6,7 @@
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/12 17:48:54 by akheired          #+#    #+#             */
-/*   Updated: 2025/01/13 20:36:24 by akheired         ###   ########.fr       */
+/*   Updated: 2025/01/14 07:38:11 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,45 +18,49 @@
 
 int main() {
     try {
-        // Bureaucrats
-        Bureaucrat highRanker("Alice", 1);
-        Bureaucrat lowRanker("Bob", 140);
 
-        // Forms
+        Bureaucrat highRanker("Ma9La", 1);
+        Bureaucrat lowRanker("ChaNkaR", 140);
+
         ShrubberyCreationForm shrubbery("Home");
         RobotomyRequestForm robotomy("Target");
         PresidentialPardonForm pardon("Eve");
 
-        // Test signing and execution
-        std::cout << "\n--- ShrubberyCreationForm ---\n";
-        lowRanker.signForm(shrubbery); // LowRanker should sign successfully
-        lowRanker.executeForm(shrubbery); // Should fail due to low execution grade
-        highRanker.executeForm(shrubbery); // Should succeed
+        std::cout << "\n--- ShrubberyCreationForm ---" << std::endl;
+        
+        std::cout << shrubbery << std::endl;
+        lowRanker.signForm(shrubbery);
+        lowRanker.executeForm(shrubbery);
+        highRanker.executeForm(shrubbery);
+        std::cout << shrubbery << std::endl;
 
         std::cout << "\n--- RobotomyRequestForm ---\n";
-        highRanker.signForm(robotomy); // HighRanker signs successfully
-        highRanker.executeForm(robotomy); // 50% chance to succeed
+        std::cout << robotomy << std::endl;
+        highRanker.signForm(robotomy);
+        highRanker.executeForm(robotomy);
+        std::cout << robotomy << std::endl;
 
         std::cout << "\n--- PresidentialPardonForm ---\n";
-        highRanker.signForm(pardon); // HighRanker signs successfully
-        highRanker.executeForm(pardon); // Should succeed
+        std::cout << pardon << std::endl;
+        highRanker.signForm(pardon);
+        highRanker.executeForm(pardon);
+        std::cout << pardon << std::endl;
 
-        // Test error handling
-        std::cout << "\n--- Error Handling ---\n";
+        std::cout << "\n--- Errors ---\n";
         try {
-            lowRanker.signForm(pardon); // Should fail to sign due to low rank
+            lowRanker.signForm(pardon);
         } catch (const std::exception& e) {
             std::cerr << e.what() << std::endl;
         }
 
         try {
-            lowRanker.executeForm(pardon); // Should fail to execute due to low rank
+            lowRanker.executeForm(pardon); 
         } catch (const std::exception& e) {
             std::cerr << e.what() << std::endl;
         }
 
     } catch (const std::exception& e) {
-        std::cerr << "Unhandled exception: " << e.what() << std::endl;
+        std::cout << e.what() << std::endl;
     }
 
     return 0;

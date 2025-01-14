@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/13 11:44:56 by akheired          #+#    #+#             */
-/*   Updated: 2025/01/14 07:40:19 by akheired         ###   ########.fr       */
+/*   Created: 2025/01/14 09:30:59 by akheired          #+#    #+#             */
+/*   Updated: 2025/01/14 11:16:28 by akheired         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,4 +51,8 @@ void ShrubberyCreationForm::action() const {
         "    \\\\/ ._\\//_/__/  ,\\_//__\\\\/.  \\_//__/_\n";
 	ofs.close();
 	std::cout << "Shrubbery file created at " << target << "_shrubbery" << std::endl;
+}
+
+AForm* ShrubberyCreationForm::create( const std::string& target ) {
+	return new ShrubberyCreationForm(target);
 }
