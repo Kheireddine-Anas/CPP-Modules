@@ -6,7 +6,7 @@
 #    By: akheired <akheired@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/01/14 09:30:22 by akheired          #+#    #+#              #
-#    Updated: 2025/01/14 13:45:52 by akheired         ###   ########.fr        #
+#    Updated: 2025/01/14 14:06:26 by akheired         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,7 @@ RM			= rm -f
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 CPPFLAGS	= -std=c++98
 
-NAME		= Form
+NAME		= Intern
 
 all:$(NAME)
 
