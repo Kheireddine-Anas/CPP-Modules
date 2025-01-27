@@ -12,7 +12,7 @@ NAME		= Iter
 
 all:$(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) iter.hpp
 		$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJS)
 
 clean:

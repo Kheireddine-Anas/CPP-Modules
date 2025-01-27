@@ -12,7 +12,7 @@ NAME		= WhatEver
 
 all:$(NAME)
 
-$(NAME): $(OBJS)
+$(NAME): $(OBJS) whatever.hpp
 		$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJS)
 
 clean:

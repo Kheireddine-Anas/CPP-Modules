@@ -8,11 +8,11 @@ RM			= rm -f
 
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-NAME		= Array
+NAME		= easyfind
 
 all:$(NAME)
 
-$(NAME): $(OBJS) Array.hpp
+$(NAME): $(OBJS) easyfind.hpp
 		$(CPP) $(CPPFLAGS) -o $(NAME) $(OBJS)
 
 clean:
