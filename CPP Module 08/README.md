@@ -55,8 +55,8 @@ Create a Span class to store integers and compute the shortest/longest span betw
 ```cpp
 class Span {
 private:
-	unsigned int _maxSize;
-	std::vector<int> _numbers;
+	unsigned int maxSize;
+	std::vector<int> numbers;
 public:
 	Span(unsigned int N);
 	void addNumber(int num);
