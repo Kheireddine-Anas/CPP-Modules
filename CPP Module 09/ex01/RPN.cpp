@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   RPN.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: akheired <akheired@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/02/17 13:22:17 by akheired          #+#    #+#             */
+/*   Updated: 2025/02/17 13:22:18 by akheired         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "RPN.hpp"
 #include <iostream>
 
@@ -45,6 +57,9 @@ void RPN::evaluate( const std::string& expression ) {
             stack.push(c - '0');
         }
         else if (isOperator(c)) {
+            if (stack.size() < 2) {
+                throw std::runtime_error("Error: Not enough operands for operation.");
+            }
             int b = stack.top(); stack.pop();
             int a = stack.top(); stack.pop();
             int rzlt = performOperation(c, a, b);

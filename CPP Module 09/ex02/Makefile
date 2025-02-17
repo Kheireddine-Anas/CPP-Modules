@@ -5,12 +5,12 @@
 #                                                     +:+ +:+         +:+      #
 #    By: akheired <akheired@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2025/02/17 13:22:24 by akheired          #+#    #+#              #
-#    Updated: 2025/02/17 13:22:25 by akheired         ###   ########.fr        #
+#    Created: 2025/02/17 14:23:42 by akheired          #+#    #+#              #
+#    Updated: 2025/02/17 14:23:43 by akheired         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS		= main.cpp RPN.cpp
+SRCS		= main.cpp PmergeMe.cpp
 
 OBJS		= $(SRCS:.cpp=.o)
 
@@ -20,7 +20,7 @@ RM			= rm -f
 
 CPPFLAGS	= -Wall -Wextra -Werror -std=c++98
 
-NAME		= RPN
+NAME		= PmergeMe
 
 all:$(NAME)
 

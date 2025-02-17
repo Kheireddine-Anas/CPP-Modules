@@ -1,15 +1,15 @@
 #!/bin/bash
 
-if [ "$#" -ne 1 ]; then
-    echo "Usage: $0 <ClassName>"
-    exit 1
-fi
+# if [ "$#" -ne 1 ]; then
+#     echo "Usage: $0 <ClassName>"
+#     exit 1
+# fi
 
 CLASS_NAME=$1
-HEADER_FILE="${CLASS_NAME}.hpp"
+_FILE="${CLASS_NAME}.hpp"
 INCLUDE_GUARD="$(echo "${CLASS_NAME}_HPP" | tr '[:lower:]' '[:upper:]')"
 
-cat <<EOF > "$HEADER_FILE"
+cat <<EOF > "$_FILE"
 #ifndef $INCLUDE_GUARD
 #define $INCLUDE_GUARD
 
@@ -28,5 +28,5 @@ class $CLASS_NAME {
 
 #endif
 EOF
-
-echo "Header file '$HEADER_FILE' created successfully."
+mv $_FILE $2
+echo "Header file '$_FILE' created successfully."
